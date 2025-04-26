@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmar - WhatsApp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://web.whatsapp.com/favicon.ico">
+    <style>
+        body {
+            margin: 0;
+            background: #128C7E;
+            font-family: Arial, sans-serif;
+        }
+        
+        .confirm-box {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .aceptar {
+            background: #25D366;
+            color: white;
+        }
+        
+        .cancelar {
+            background: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirm-box">
+        <h3>¿Confirmar invitación?</h3>
+        <p>¿Estás seguro de invitar a este contacto a tu chat privado?</p>
+        
+        <div class="buttons">
+            <button class="btn aceptar" onclick="alert('Invitación enviada'); window.location.href='index.html'">Aceptar</button>
+            <button class="btn cancelar" onclick="window.location.href='index.html'">Cancelar</button>
+        </div>
+    </div>
+</body>
+</html>
