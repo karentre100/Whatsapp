@@ -15,18 +15,19 @@
             background-color: #128C7E;
             padding: 20px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #075E54;
         }
         
         .title {
             color: black;
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 600;
             margin: 15px 0;
+            text-transform: uppercase;
         }
         
         .content {
-            background-color: white;
+            background-color: #ECE5DD;
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -35,30 +36,32 @@
         }
         
         .input-code {
-            width: 80%;
+            width: 200px;
             padding: 15px;
             margin: 50px 0;
             font-size: 20px;
             border: 2px solid #128C7E;
-            border-radius: 8px;
+            border-radius: 25px;
             text-align: center;
             outline: none;
+            background-color: white;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <div class="title">PERSONAS A LAS QUE TE GUSTARÍA INVITAR</div>
+        <div class="title">Personas a las que te gustaría invitar</div>
     </div>
     
     <div class="content">
         <input 
-            type="text" 
+            type="number" 
             class="input-code" 
-            placeholder="Ingresa 6 dígitos"
+            placeholder="6 dígitos"
             maxlength="6"
-            pattern="\d{6}"
-            title="Por favor ingresa exactamente 6 dígitos"
+            inputmode="numeric"
+            pattern="[0-9]{6}"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 6)"
         >
     </div>
 </body>
